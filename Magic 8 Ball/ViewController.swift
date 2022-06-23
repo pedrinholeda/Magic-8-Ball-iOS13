@@ -9,10 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    // MARK: Properties
     let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
-
-
-
+    
+    // MARK: Outlets
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var askButton: UIButton!
+    
+    // MARK: Initialization
+    
+    // MARK: Overrides
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    // MARK: Actions
+    @IBAction func askQuestion(_ sender: Any) {
+        imageView.image = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")][Int.random(in: 0...4)]
+    }
+    
+    // MARK: Methods
+    
+    
 }
-
