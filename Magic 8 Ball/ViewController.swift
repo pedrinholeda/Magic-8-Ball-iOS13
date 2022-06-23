@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButton()
     }
     // MARK: Actions
     @IBAction func askQuestion(_ sender: Any) {
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: Methods
-    
-    
+    func setupButton() {
+        askButton.layer.cornerRadius = 20
+    }
 }
